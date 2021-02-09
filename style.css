@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+:root {
+ --bg-pg-color: #64dfdf;
+ --kitten-body-color: #0c0c0c;
+ --kitten-eye-bg-color: #fedc56;
+ --kitten-eyeball-color: #0c0c0c;
+ --kitten-eyeball-glint-color: #fff;
+ --kitten-nose-color: #606060;
+ --kitten-mouth-color: #606060;
+}
+
+body {
+  background-color: var(--bg-pg-color);
+}
+
+.container {
+  height: 500px;
+  width: 550px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.kitten {
+  position: relative;
+  top: 150px;
+  left: 150px; 
+}
+
+.face {
+  background-color: var(--kitten-body-color);
+  height: 95px;
+  width: 116px;
+  border-radius: 150px 150px 330px 350px;
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+
+/*** EARS ***/
+.ear-left, .ear-right {
+  height: 0;
+  width: 0;
+  border-bottom: 50px solid var(--kitten-body-color);
+  border-left: 20px solid transparent;
+  border-right: 130px solid transparent;
+  position: relative;
+  z-index: -1;
+}
+
+.ear-left {
+  bottom: 8px;
+  transform: rotate(250deg);
+  left: -51px;
+  border-radius: 85%;
+}
+
+.ear-right {
+  bottom: 62px;
+  left: 18px;
+  transform: rotate(-80deg);
+  border-radius: 85%;
+}
+
+/*** EYES ***/
+.eye-left, .eye-right {
+  background-color: var(--kitten-eye-bg-color); 
+  height: 29px;
+  width: 29px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eye-left {
+  bottom: 85px;
+  left: 15px;
+}
+
+.eye-right {
+  bottom: 114px;
+  left: 75px;
+}
+
+.eyeball-left, .eyeball-right {
+  background-color: var(--kitten-eyeball-color);
+  height: 24px;
+  width: 17px;
+  border-radius: 80%;
+  position: relative;
+  top: 3px;
+  left: 6px;
+}
+
+.eyeball-glint-left, .eyeball-glint-right {
+  background-color: var(--kitten-eyeball-glint-color);
+  height: 3px;
+  width: 3px;
+  border-radius: 80%;
+  position: relative;
+  top: 1px;
+  left: 9px;
+}
+
+/*** NOSE ***/
+.nose {
+  height: 0;
+  width: 0;
+  border-top: 8px solid var(--kitten-nose-color);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: relative;
+  bottom: 95px;
+  left: 55px;
+} 
+
+/*** MOUTH ***/
+.mouth-left, .mouth-right {
+  background-color: var(--kitten-mouth-color);
+  height: 8px;
+  width: 1px;
+  position: relative;
+}
+
+.mouth-left {
+  transform: rotate(45deg);
+  right: 4px;
+  bottom: 1.5px;
+}
+
+.mouth-right {
+  transform: rotate(-45deg);
+  bottom: 10px;
+  left: 3.5px;
+}
+
+/*** BODY ***/
+.body {
+  background-color: var(--kitten-body-color);
+  height: 170px;
+  width: 85px;
+  position: relative;
+  left: 26px;
+  bottom: 20px;
+  border-radius: 40px 150px 30px 130px;
+  z-index: 1;
+}
+
+.paw-left, .paw-right {
+  background-color: var(--kitten-body-color);
+  height: 140px;
+  width: 22px;
+  position: relative;
+  border-radius: 0 0px 10px 10px;
+} 
+
+/*** PAWS ***/
+.paw-left {
+  top: 27px;
+  left: -1px;
+  transform: rotate(15deg)
+}
+
+.paw-right {
+  top: -83px;
+  left: 8px;
+  transform: rotate(7deg)
+}
+
+/*** TAIL ***/
+.tail {
+  background-color: var(--kitten-body-color);
+  width: 100px;
+  height: 15px;
+  position: relative;
+  top: -125px;
+  left: 50px;
+  border-radius: 80px 50px 200px 50px;
+  transform: rotate(1deg)
+}
